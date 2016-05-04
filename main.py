@@ -28,7 +28,6 @@ def run(**params):
                 from_date = str(params.get('month')) + '/' + str(params.get('from_day')) + '/' + str(params.get('year'))
                 to_date = str(params.get('month')) + '/' + str(params.get('to_day')) + '/' + str(params.get('year'))
                 writer.writerow([link.getText(), link.get('href'), from_date, to_date])
-                print(link.getText())
 
 if __name__ == "__main__":
     run(query="tesla", month=1, from_day=1, to_day=5, year=2013)
